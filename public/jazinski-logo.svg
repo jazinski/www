@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80" fill="none">
+  <!-- J with gradient -->
+  <defs>
+    <linearGradient id="jGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3d5a73;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c9a65c;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- J letter -->
+  <path d="M 35 10 L 45 10 L 45 45 Q 45 55 35 55 Q 25 55 25 45 L 25 40 L 30 40 L 30 45 Q 30 50 35 50 Q 40 50 40 45 L 40 10 Z" 
+        fill="url(#jGradient)" stroke="#c9a65c" stroke-width="1"/>
+  
+  <!-- Dot on i -->
+  <rect x="33" y="2" width="4" height="4" fill="#3d5a73"/>
+  
+  <!-- Code brackets -->
+  <text x="50" y="35" font-family="monospace" font-size="20" fill="#c9a65c" font-weight="bold">&lt;/&gt;</text>
+  
+  <!-- JAZINSKI text -->
+  <text x="5" y="70" font-family="Arial, sans-serif" font-size="14" font-weight="bold">
+    <tspan fill="#3d5a73">JAZI</tspan><tspan fill="#f0f0f0">NSKI</tspan>
+  </text>
+  
+  <!-- Tagline -->
+  <text x="5" y="78" font-family="Arial, sans-serif" font-size="4" fill="#888" letter-spacing="1">
+    Code. Create. Innovate.
+  </text>
+</svg>
