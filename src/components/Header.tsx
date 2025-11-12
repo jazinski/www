@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Moon, Sun } from "./Icons";
 
 interface HeaderProps {
@@ -12,12 +13,42 @@ export default function Header({ isDark, toggleTheme }: HeaderProps) {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <img
-              src="/jazinski-logo.svg"
-              alt="Jazinski Logo"
-              className="w-auto h-12"
-            />
+            <Link to="/">
+              <img
+                src="/jazinski-logo.svg"
+                alt="Jazinski Logo"
+                className="w-auto h-12"
+              />
+            </Link>
           </div>
+
+          {/* Navigation */}
+          <nav className="hidden md:flex items-center space-x-6">
+            <Link
+              to="/about"
+              className="text-gray-600 dark:text-gray-400 hover:text-jazinski-blue dark:hover:text-jazinski-gold transition-colors"
+            >
+              About
+            </Link>
+            <Link
+              to="/skills"
+              className="text-gray-600 dark:text-gray-400 hover:text-jazinski-blue dark:hover:text-jazinski-gold transition-colors"
+            >
+              Skills
+            </Link>
+            <Link
+              to="/services"
+              className="text-gray-600 dark:text-gray-400 hover:text-jazinski-blue dark:hover:text-jazinski-gold transition-colors"
+            >
+              Services
+            </Link>
+            <Link
+              to="/contact"
+              className="text-gray-600 dark:text-gray-400 hover:text-jazinski-blue dark:hover:text-jazinski-gold transition-colors"
+            >
+              Contact
+            </Link>
+          </nav>
 
           {/* Theme Toggle */}
           <button
