@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Moon, Sun } from "./Icons";
 
 interface HeaderProps {
@@ -24,30 +24,54 @@ export default function Header({ isDark, toggleTheme }: HeaderProps) {
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
-            <Link
+            <NavLink
               to="/about"
-              className="text-gray-600 dark:text-gray-400 hover:text-jazinski-blue dark:hover:text-jazinski-gold transition-colors"
+              className={({ isActive }) =>
+                `transition-colors ${
+                  isActive
+                    ? "text-jazinski-blue dark:text-jazinski-gold font-semibold"
+                    : "text-gray-600 dark:text-gray-400 hover:text-jazinski-blue dark:hover:text-jazinski-gold"
+                }`
+              }
             >
               About
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to="/skills"
-              className="text-gray-600 dark:text-gray-400 hover:text-jazinski-blue dark:hover:text-jazinski-gold transition-colors"
+              className={({ isActive }) =>
+                `transition-colors ${
+                  isActive
+                    ? "text-jazinski-blue dark:text-jazinski-gold font-semibold"
+                    : "text-gray-600 dark:text-gray-400 hover:text-jazinski-blue dark:hover:text-jazinski-gold"
+                }`
+              }
             >
               Skills
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to="/services"
-              className="text-gray-600 dark:text-gray-400 hover:text-jazinski-blue dark:hover:text-jazinski-gold transition-colors"
+              className={({ isActive }) =>
+                `transition-colors ${
+                  isActive
+                    ? "text-jazinski-blue dark:text-jazinski-gold font-semibold"
+                    : "text-gray-600 dark:text-gray-400 hover:text-jazinski-blue dark:hover:text-jazinski-gold"
+                }`
+              }
             >
               Services
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to="/contact"
-              className="text-gray-600 dark:text-gray-400 hover:text-jazinski-blue dark:hover:text-jazinski-gold transition-colors"
+              className={({ isActive }) =>
+                `transition-colors ${
+                  isActive
+                    ? "text-jazinski-blue dark:text-jazinski-gold font-semibold"
+                    : "text-gray-600 dark:text-gray-400 hover:text-jazinski-blue dark:hover:text-jazinski-gold"
+                }`
+              }
             >
               Contact
-            </Link>
+            </NavLink>
           </nav>
 
           {/* Theme Toggle */}
