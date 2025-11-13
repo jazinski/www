@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Outlet } from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import Breadcrumb from './components/Breadcrumb'
 
 function App() {
   const [isDark, setIsDark] = useState(false)
@@ -33,6 +34,7 @@ function App() {
       <Header isDark={isDark} toggleTheme={toggleTheme} />
       
       <main className="flex-1 container mx-auto px-4 py-12">
+        <Breadcrumb />
         <Outlet />
       </main>
 
